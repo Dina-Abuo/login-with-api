@@ -5,8 +5,7 @@ const Header = () => {
     return (
         <div>
 
-            <Link to='/login' style={ {padding:'50px'}}> logIn </Link> 
-            
+            <Link to='/login' style={ {padding:'50px'}}> logIn </Link>      
             <Link to='/profile'> profile</Link> 
         </div>
     )
