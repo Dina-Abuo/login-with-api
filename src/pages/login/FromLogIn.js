@@ -26,16 +26,16 @@ export default function FromLogIn() {
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        const token = "MmJmMDcxNzYtNWZlZS00YTE2LThlZWItZjg2ODQ5YzU2N2U5";
+        const token = "NTJmMTljNWYtZjNjZS00MTEzLTgzYWQtMDZkOWVmYTE4ZjYw";
         axios.post('https://api.m3o.com/v1/user/Create', {
             headers: { "Authorization": `Bearer ${token}` }
             ,
             fromData: {
-                id: user.id,
-                profile: user.profile,
-                Email: user.userEmail,
-                Password: user.userPassword,
-                name: user.username,
+                "id": user.id,
+                "profile": user.profile,
+                "email": user.userEmail,
+                "password": user.userPassword,
+                "name": user.username,
             }
         }).then(() => {
             console.log('post add')
@@ -59,7 +59,7 @@ export default function FromLogIn() {
     //         nav('/profile');
     //     }).catch((err) => console.log(err))
     // }
-    
+
     return (
         <div>
             <form className="form-login" onSubmit={(event) => handleSubmit(event)} >
