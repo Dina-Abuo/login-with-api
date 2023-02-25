@@ -27,14 +27,13 @@ export default function FromSignUp() {
             id: user.id,
             email: user.userEmail,
             password: user.userPassword,
-            name: user.username
+            username: user.username
         }).then(() => {
             console.log('post add')
             nav('/profile');
         }).catch((error) => {
-            console.log(error)
+            alert(error.response.data.detail)
         })
-
     }
 
     return (
